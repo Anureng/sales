@@ -45,7 +45,7 @@ const [deliveredAddress, setDeliveredAddress] = useState()
                <div>
                 All Contract Product Details
                 </div> 
-                <input type="number" className=' px-1 py-2 rounded-xl' onChange={(e)=>setEnterProductId(e.target.value)} placeholder='enter id '  />
+                <input type="number" className=' px-1 py-2 rounded-xl' onChange={(e)=>setEnterProductId(e.target.value)} placeholder='enter single no. '  />
                 </div>
                     {data  ? data.map((val, idx) => {
                         val = ((typeof val === "boolean") && val === true) ? "true" : ((typeof val === "boolean")   && val === false)? "false" : val 
@@ -60,7 +60,7 @@ const [deliveredAddress, setDeliveredAddress] = useState()
                     Delivered Address 
                 </div>
                 <div className='space-x-4'>
-                    <input type="number" onChange={(e)=>setDeliveredAddress(e.target.value)} className='px-2 py-2 rounded-xl'  placeholder='Enter Id' />
+                    <input type="number" onChange={(e)=>setDeliveredAddress(e.target.value)} className='px-2 py-2 rounded-xl'  placeholder='Enter single no.' />
                     <button className='bg-white px-1 py-2 rounded-xl' disabled={!write} onClick={() => write?.()}>Click</button>
                 </div>
             </div>
